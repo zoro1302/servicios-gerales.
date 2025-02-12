@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Residenciales</title>
+    
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function cambiarFondo() {
+            var colores = ["black", "gray", "blue", "red", "purple", "green"];
+            var colorActual = document.body.style.backgroundColor;
+            var nuevoColor = colores[Math.floor(Math.random() * colores.length)];
+
+            while (nuevoColor === colorActual) {
+                nuevoColor = colores[Math.floor(Math.random() * colores.length)];
+            }
+
+            document.body.style.backgroundColor = nuevoColor;
+        }
+
+        function enviarWhatsApp() {
+            var nombre = document.getElementById("nombre").value;
+            var mensaje = document.getElementById("mensaje").value;
+            var telefono = "+34624015495"; // Número de WhatsApp donde recibirás los mensajes
+            
+            var url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent("Hola, mi nombre es " + nombre + ". " + mensaje);
+            window.open(url, "_blank");
+        }
+    </script>
+</head>
+<body>
+    <!-- Imágenes en los lados izquierdo y derecho -->
+    <img src="casa.jpg" alt="Imagen Izquierda" class="imagen-izquierda">
+    <img src="casa.jpg" alt="Imagen Derecha" class="imagen-derecha">
+
+    <header>
+        <h1>Servicios Residenciales</h1>
+        <nav role="navigation" aria-label="Menú principal">
+            <ul class="menu">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <ul class="servicios-lista">
+            <li>✅ Armado de muebles</li>
+            <li>🎨 Pintura de pisos</li>
+            <li>🏠 Reformas</li>
+            <li>⚡ Electricidad</li>
+            <li>🛠️ Pladur</li>
+            <li>🚰 Instalación de termos</li>
+            <li>💡 Instalación de lámparas</li>
+            <li>🔧 Daños generales</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para solicitar un servicio, contáctanos:</p>
+        <p>📞 624015495 / 624622815</p>
+        <form onsubmit="event.preventDefault(); enviarWhatsApp();">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <button type="submit">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Botón para cambiar el color del fondo -->
+    <button class="btn-fondo" onclick="cambiarFondo()">Cambiar Fondo</button>
+
+    <footer>
+        <p>&copy; 2025 Servicios Residenciales. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

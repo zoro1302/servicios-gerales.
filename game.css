@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    background-color: black;  /* Fondo negro por defecto */
+    color: white;  /* Letra blanca */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+}
+
+/* Formulario */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón de enviar WhatsApp */
+form button {
+    background-color: #25D366;  /* Verde de WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #128C7E;
+}
+
+/* Botón para cambiar fondo */
+button {
+    background-color: #007BFF;  /* Azul */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;  /* Azul oscuro */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
